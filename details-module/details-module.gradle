@@ -3,6 +3,9 @@ dependencies {
 
     /* for contract tests */
     // testCompile project(':domain-module').sourceSets.test.output
+
+    compile dependency.log4jApi
+    runtime dependency.log4jCore
 }
 
-apply from: "$rootDir/gradle/log4j.gradle"
+// alternative: apply from: "$rootDir/gradle/log4j.gradle"

@@ -1,4 +1,4 @@
-rootProject.name = 'gradle-template'
+rootProject.name = 'gradle-kotlin-template'
 
 include 'domain-module'
 include 'details-module'
