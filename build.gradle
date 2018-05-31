@@ -24,7 +24,7 @@ subprojects {
     apply from: "$rootDir/gradle/junit+assertj.gradle"
 
     /* publishing */
-    apply from: "$rootDir/gradle/publish-to-nexus.gradle"
+    // apply from: "$rootDir/gradle/publish-to-nexus.gradle"
 }
 
 task wrapper(type: Wrapper) {
