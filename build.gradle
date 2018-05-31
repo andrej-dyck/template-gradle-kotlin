@@ -9,6 +9,7 @@ buildscript {
 }
 
 allprojects {
+    apply from: "$rootDir/gradle/clean-up.gradle"
 }
 
 subprojects {
@@ -25,10 +26,7 @@ subprojects {
     // apply from: "$rootDir/gradle/publish-to-nexus.gradle"
 }
 
+/* Gradle wrapper */
 task wrapper(type: Wrapper) {
     gradleVersion = '4.6'
 }
-
-/* clean build from root project */
-apply plugin: 'base'
-clean.delete << file('build')
