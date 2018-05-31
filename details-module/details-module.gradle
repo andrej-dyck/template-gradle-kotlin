@@ -4,3 +4,5 @@ dependencies {
     /* for contract tests */
     // testCompile project(':domain-module').sourceSets.test.output
 }
+
+apply from: "$rootDir/gradle/log4j.gradle"
