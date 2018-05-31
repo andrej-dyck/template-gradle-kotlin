@@ -16,7 +16,10 @@ jar {
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' ')
         )
     }
-    /* executable jar */
+}
+
+/* stand-alone executable jar (larger file) */
+jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
