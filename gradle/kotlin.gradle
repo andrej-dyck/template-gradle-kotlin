@@ -1,0 +1,29 @@
+/**
+ * https://guides.gradle.org/building-kotlin-jvm-libraries/
+ */
+
+apply plugin: 'kotlin'
+
+dependencies {
+    compile dependency.kotlinStdLib
+}
+
+//kotlin {
+//    experimental.coroutines 'enable'
+//}
+
+sourceSets {
+    main.kotlin.srcDirs = ['src']
+    main.resources.srcDirs = ['resources']
+    test.kotlin.srcDirs = ['test']
+    test.resources.srcDirs = ['test-resources']
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = v.kotlinJVM
+//    kotlinOptions.allWarningsAsErrors = true
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = v.kotlinJVM
+}

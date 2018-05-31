@@ -1,0 +1,36 @@
+dependencies {
+    compile project(':domain-module')
+    compile project(':details-module')
+}
+
+/* this module has a main */
+apply plugin: 'application'
+
+mainClassName = 'ad.template.gradle.main.MainKt'
+
+/* jar with main class */
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName,
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' ')
+        )
+    }
+    /* executable jar */
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+/* distribution */
+applicationDistribution.from("config/") {
+    into "config"
+}
+
+artifacts { archives distZip }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact distZip
+        }
+    }
+}

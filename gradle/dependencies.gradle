@@ -1,0 +1,41 @@
+ext {
+    repos = [
+            repositories.mavenLocal(),
+            repositories.jcenter(),
+            // repositories.maven { url nexus },
+            // repositories.maven { url "https://url" }
+    ]
+    v = [
+            kotlin       : '1.2.41',
+            kotlinJVM    : '1.8',
+
+            log4j        : '2.11.0',
+
+            junitPlatform: '1.2.0',
+            junitJupiter : '5.2.0',
+            junitVintage : '4.12.2',
+
+            assertJ      : '3.10.0',
+            mockito      : '2.18.3',
+            jqwik        : '0.8.11',
+    ]
+    gradlePlugin = [
+            kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${v.kotlin}"
+    ]
+    dependency = [
+            kotlinStdLib      : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+
+            log4jApi          : "org.apache.logging.log4j:log4j-api:${v.log4j}",
+            log4jCore         : "org.apache.logging.log4j:log4j-core:${v.log4j}",
+
+            junitJupiter      : "org.junit.jupiter:junit-jupiter-api:${v.junitJupiter}",
+            junitJupiterParams: "org.junit.jupiter:junit-jupiter-params:${v.junitJupiter}",
+            junitJupiterEngine: "org.junit.jupiter:junit-jupiter-engine:${v.junitJupiter}",
+            junitVintage      : "junit:junit:${v.junitVintage}",
+            junitVintageEngine: "org.junit.vintage:junit-vintage-engine:${v.junitVintage}",
+
+            assertJ           : "org.assertj:assertj-core:${v.assertJ}",
+            mockito           : "org.mockito:mockito-core:${v.mockito}",
+            jqwik             : "com.github.jlink:jqwik:${v.jqwik}",
+    ]
+}

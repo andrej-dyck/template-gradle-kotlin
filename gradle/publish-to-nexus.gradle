@@ -1,0 +1,38 @@
+/**
+ * https://docs.gradle.org/current/userguide/publishing_maven.html
+ */
+
+apply plugin: 'maven-publish'
+
+/* WHERE to publish */
+publishing {
+    repositories {
+        maven {
+            url project.version.endsWith('-SNAPSHOT') ?
+                    nexus_snapshots : nexus_releases
+            credentials {
+                username nexus_deploy_user
+                password nexus_deploy_pwd
+            }
+        }
+    }
+}
+
+/* WHAT to publish */
+publishing {
+    publications {
+        publishJars(MavenPublication) {
+            from components.java
+            artifact sourceJar
+        }
+    }
+}
+
+/* publish sources jar */
+task sourceJar(type: Jar) {
+    group = LifecycleBasePlugin.BUILD_GROUP
+    description = 'Runs the integration tests.'
+
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
