@@ -17,3 +17,18 @@ jar {
         )
     }
 }
+
+/* distribution */
+applicationDistribution.from("config/") {
+    into "config"
+}
+
+artifacts { archives distZip }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact distZip
+        }
+    }
+}
