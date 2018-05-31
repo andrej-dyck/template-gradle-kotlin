@@ -2,3 +2,18 @@ dependencies {
     compile project(':domain-module')
     compile project(':details-module')
 }
+
+/* this module has a main */
+apply plugin: 'application'
+
+mainClassName = 'ad.template.gradle.main.MainKt'
+
+/* executable jar */
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName,
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' ')
+        )
+    }
+}
