@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':domain-module')
+
+    /* for contract tests */
+    // testCompile project(':domain-module').sourceSets.test.output
+}
