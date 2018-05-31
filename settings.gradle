@@ -1,0 +1,17 @@
+rootProject.name = 'gradle-template'
+
+include 'domain-module'
+include 'details-module'
+include 'main'
+
+/**
+ * Custom build file names for all sub-projects and assert the build file exist
+ */
+rootProject.children.each { renamedBuildFile it }
+
+private static renamedBuildFile(ProjectDescriptor subProject) {
+    subProject.buildFileName = "${subProject.name}.gradle"
+    assert subProject.buildFile.isFile()
+
+    subProject.children.each { renamedBuildFile it }
+}
