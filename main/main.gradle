@@ -8,7 +8,7 @@ apply plugin: 'application'
 
 mainClassName = 'ad.template.gradle.main.MainKt'
 
-/* executable jar */
+/* jar with main class */
 jar {
     manifest {
         attributes(
@@ -16,6 +16,8 @@ jar {
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' ')
         )
     }
+    /* executable jar */
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
 /* distribution */
