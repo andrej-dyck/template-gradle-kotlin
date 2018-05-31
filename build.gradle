@@ -9,8 +9,6 @@ buildscript {
 }
 
 allprojects {
-    /* ide */
-    apply from: "$rootDir/gradle/ide.gradle"
 }
 
 subprojects {
