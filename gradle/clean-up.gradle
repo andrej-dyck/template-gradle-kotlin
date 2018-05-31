@@ -1,0 +1,3 @@
+apply plugin: 'base'
+
+clean.delete << file('out') // intellij output
