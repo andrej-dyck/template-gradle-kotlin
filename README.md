@@ -6,6 +6,10 @@ Engineering a good Gradle structure for Kotlin projects.
 
 ## Changes
 
+#### 1.2.0
+
+* Update Gradle version to 4.7
+
 #### 1.1.0
 
 * Multi-project Gradle build ([build.gradle], [settings.gradle]) with Gradle wrapper
