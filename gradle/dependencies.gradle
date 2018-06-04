@@ -36,6 +36,6 @@ ext {
 
             assertJ           : "org.assertj:assertj-core:${v.assertJ}",
             mockito           : "org.mockito:mockito-core:${v.mockito}",
-            jqwik             : "com.github.jlink:jqwik:${v.jqwik}",
+            jqwik             : "net.jqwik:jqwik:${v.jqwik}",
     ]
 }
