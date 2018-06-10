@@ -6,6 +6,11 @@ Engineering a good Gradle structure for Kotlin projects.
 
 ## Changes
 
+#### 1.3.0
+
+* Update Gradle version to 4.8
+* Use new wrapper task syntax
+
 #### 1.2.0
 
 * Update Gradle version to 4.7
