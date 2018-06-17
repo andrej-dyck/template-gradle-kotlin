@@ -29,4 +29,5 @@ subprojects {
 /* Gradle wrapper */
 wrapper {
     gradleVersion = '4.8'
+    distributionType = Wrapper.DistributionType.BIN
 }
