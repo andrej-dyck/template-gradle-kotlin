@@ -6,7 +6,7 @@ ext {
             // repositories.maven { url "https://url" }
     ]
     v = [
-            kotlin       : '1.2.41',
+            kotlin       : '1.2.50',
             kotlinJVM    : '1.8',
 
             log4j        : '2.11.0',
@@ -16,7 +16,7 @@ ext {
             junitVintage : '4.12.2',
 
             assertJ      : '3.10.0',
-            mockito      : '2.18.3',
+            mockito      : '2.19.0',
             jqwik        : '0.8.11',
     ]
     gradlePlugin = [

@@ -6,16 +6,20 @@ Engineering a good Gradle structure for Kotlin projects.
 
 ## Changes
 
-#### 1.3.0
+#### 1.3.x
 
 * Update Gradle version to 4.8
 * Use new wrapper task syntax
+* Define wrapper type as *BIN* 
+* Amend publishing task to be compatible with Gradle 5.0
+* Update Kotlin to 1.2.50
+* Update Mockito to 2.19.0
 
-#### 1.2.0
+#### 1.2.x
 
 * Update Gradle version to 4.7
 
-#### 1.1.0
+#### 1.1.x
 
 * Multi-project Gradle build ([build.gradle], [settings.gradle]) with Gradle wrapper
 * Sub-projects have custom name for their build files  
