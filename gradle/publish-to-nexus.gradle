@@ -23,7 +23,9 @@ publishing {
     publications {
         publishJars(MavenPublication) {
             from components.java
-            artifact sourceJar
+            afterEvaluate {
+                artifact sourceJar
+            }
         }
     }
 }
