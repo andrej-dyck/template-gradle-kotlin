@@ -12,6 +12,8 @@ Engineering a good Gradle structure for Kotlin projects.
 * Use new wrapper task syntax
 * Define wrapper type as *BIN* 
 * Amend publishing task to be compatible with Gradle 5.0
+* Update Kotlin to 1.2.50
+* Update Mockito to 2.19.0
 
 #### 1.2.x
 
