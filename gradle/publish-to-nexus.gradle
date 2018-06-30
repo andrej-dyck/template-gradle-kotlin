@@ -18,23 +18,23 @@ publishing {
     }
 }
 
-/* WHAT to publish */
-publishing {
-    publications {
-        publishJars(MavenPublication) {
-            from components.java
-            afterEvaluate {
-                artifact sourceJar
-            }
-        }
-    }
-}
-
-/* publish sources jar */
+/* pack sources jar */
 task sourceJar(type: Jar) {
     group = LifecycleBasePlugin.BUILD_GROUP
     description = 'Runs the integration tests.'
 
     classifier = 'sources'
     from sourceSets.main.allSource
+}
+
+/* WHAT to publish */
+publishing {
+    publications {
+        publishJars(MavenPublication) {
+            /* publish classes jar */
+            from components.java
+            /* publish sources jar */
+            artifact sourceJar
+        }
+    }
 }
