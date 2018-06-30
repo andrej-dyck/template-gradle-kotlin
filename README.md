@@ -8,7 +8,7 @@ Engineering a good Gradle structure for Kotlin projects.
 
 #### 1.3.x
 
-* Update Gradle version to 4.8
+* Update Gradle version to 4.8.1
 * Use new wrapper task syntax
 * Define wrapper type as *BIN* 
 * Amend publishing task to be compatible with Gradle 5.0
