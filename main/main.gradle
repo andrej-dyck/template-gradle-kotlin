@@ -29,11 +29,9 @@ applicationDistribution.from("config/") {
 }
 
 /* publishing */
-// artifacts { archives distZip }
-//
 // publishing {
 //     publications {
-//         mavenJava(MavenPublication) {
+//         publishDistZip(MavenPublication) {
 //             artifact distZip
 //         }
 //     }
