@@ -6,9 +6,18 @@ Engineering a good Gradle structure for Kotlin projects.
 
 ## Changes
 
+#### 1.4.0
+
+* Update Gradle to 4.10.1
+* Update Kotlin to 1.2.50
+* Update Junit to 5.3.1
+* Update AssertJ to 3.11.1
+* Update Log4J2 to 2.11.1
+* Remove Mockito
+
 #### 1.3.x
 
-* Update Gradle version to 4.8.1
+* Update Gradle to 4.8.1
 * Use new wrapper task syntax
 * Define wrapper type as *BIN* 
 * Amend publishing task to be compatible with Gradle 5.0
@@ -17,7 +26,7 @@ Engineering a good Gradle structure for Kotlin projects.
 
 #### 1.2.x
 
-* Update Gradle version to 4.7
+* Update Gradle to 4.7
 
 #### 1.1.x
 
