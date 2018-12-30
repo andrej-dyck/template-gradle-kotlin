@@ -6,6 +6,13 @@ Engineering a good Gradle structure for Kotlin projects.
 
 ## Changes
 
+#### 2.0.0
+
+* Update Gradle to 5.0
+* Update Kotlin to 1.3.11
+* Update Junit to 5.3.2
+* Update Jqwik to 0.9.3
+
 #### 1.4.0
 
 * Update Gradle to 4.10.1
