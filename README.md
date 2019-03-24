@@ -6,6 +6,10 @@ Engineering a good Gradle structure for Kotlin projects.
 
 ## Changes
 
+#### 2.1.x
+
+* Update Gradle to 5.3
+
 #### 2.0.0
 
 * Update Gradle to 5.0
