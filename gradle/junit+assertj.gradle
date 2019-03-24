@@ -5,8 +5,6 @@
 dependencies {
     /* JUnit 5 */
     testCompile dependency.junitJupiter
-    testCompile dependency.junitJupiterParams
-    testRuntime dependency.junitJupiterEngine
 
     /* JUnit 3 + 4 */
     // testCompile dependency.junitVintage
