@@ -12,9 +12,8 @@ ext {
             log4j        : '2.11.1',
 
             junit        : '5.4.1',
-
-            assertJ      : '3.11.1',
-            jqwik        : '0.9.3',
+            assertJ      : '3.12.2',
+            jqwik        : '1.1.1',
     ]
     gradlePlugin = [
             kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${v.kotlin}"
