@@ -9,6 +9,7 @@ Engineering a good Gradle structure for Kotlin projects.
 #### 2.1.x
 
 * Update Gradle to 5.3
+* Update Kotlin to 1.3.21
 * Update Junit to 5.4.1
 * Remove Junit-Vintage
 #### 2.0.0
