@@ -1,3 +1,5 @@
+import ad.gradle.plugin.junit5
+import ad.gradle.plugin.assertJ
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -22,13 +24,13 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    
+
     /* Kotlin Coroutines */
     // implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
-    
+
     /* JUnit 5 + AssertJ */
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
-    testImplementation("org.assertj:assertj-core:3.15.0")
+    junit5()
+    assertJ()
 }
 
 /* Compile to JVM 8 */
