@@ -1,8 +1,0 @@
-/**
- * https://logging.apache.org/log4j/2.x/
- */
-
-dependencies {
-    compile dependency.log4jApi
-    runtime dependency.log4jCore
-}
