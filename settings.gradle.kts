@@ -1,1 +1,1 @@
-rootProject.name = "ad.template.gradle.kotlin"
+rootProject.name = "Kotlin Gradle-Project Template"
