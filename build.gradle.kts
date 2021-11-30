@@ -20,7 +20,7 @@ dependencies {
     // AssertJ
     testImplementation("org.assertj:assertj-core:3.21.0")
     // jqwik
-    testImplementation("net.jqwik:jqwik:1.5.6")
+    testImplementation("net.jqwik:jqwik:1.6.0")
 }
 
 /* Source sets by Kotlin conventions /src and /test */
