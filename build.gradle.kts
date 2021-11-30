@@ -31,6 +31,10 @@ kotlin {
     }
 }
 
+/* Resources */
+sourceSets["main"].resources.srcDirs("resources")
+sourceSets["test"].resources.srcDirs("test-resources")
+
 /* Detekt */
 detekt {
     source = files(sources.map { it.second })
