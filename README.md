@@ -11,17 +11,17 @@ A simple Gradle template for Kotlin projects. E.g., to jump start a coding kata.
 * [AssertJ](https://assertj.github.io/doc/)
 * [Jqwik](https://jqwik.net/)
 
-**Build**
+**Assemble and Check**
 ```
 ./gradlew build
 ```
 
-**Detekt**
+**Only Detekt**
 ```
 ./gradlew detekt
 ```
 
-**Test**
+**Only Tests**
 ```
-./gradlew check
+./gradlew test
 ```
