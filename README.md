@@ -2,6 +2,8 @@
 
 ![alt text](gradle-kotlin-logo.jpeg "Gradle Kotlin")
 
+![build](https://github.com/andrej-dyck/template-gradle-kotlin/actions/workflows/gradle-ci.yml/badge.svg?branch=main)
+
 A simple Gradle template for Kotlin projects. E.g., to jump start a coding kata.
 
 Instead of forking this repository, simply create a repository with the `"Use this template"` button. This will also trigger a clean-up action.
