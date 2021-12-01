@@ -19,8 +19,6 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     // AssertJ
     testImplementation("org.assertj:assertj-core:3.21.0")
-    // jqwik
-    testImplementation("net.jqwik:jqwik:1.6.0")
 }
 
 /* Source sets by Kotlin conventions /src and /test */
@@ -41,10 +39,10 @@ detekt {
     config = files("detekt.yml")
 }
 
-/* Check with JUnit 5 and jqwik */
+/* Check with JUnit 5 */
 tasks.test {
     useJUnitPlatform {
-        includeEngines("junit-jupiter", "jqwik")
+        includeEngines("junit-jupiter")
         excludeEngines("junit-vintage")
     }
 }

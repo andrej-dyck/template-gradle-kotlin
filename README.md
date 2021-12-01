@@ -11,7 +11,6 @@ Instead of forking this repository, simply create a repository with the `"Use th
 * [Detekt](https://detekt.github.io/detekt/)
 * [JUnit 5](https://junit.org/junit5/docs/current/user-guide/)
 * [AssertJ](https://assertj.github.io/doc/)
-* [Jqwik](https://jqwik.net/)
 
 ## Build with Gradle
 ```
