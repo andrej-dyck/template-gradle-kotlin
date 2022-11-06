@@ -20,12 +20,8 @@ dependencies {
 }
 
 /* Source sets by Kotlin conventions /src and /test */
-val sources = setOf("main" to "src/", "test" to "test/")
-kotlin {
-    sources.forEach { (set, dir) ->
-        sourceSets[set].apply { kotlin.srcDirs(dir) }
-    }
-}
+sourceSets.main { kotlin.srcDirs("src/") }
+sourceSets.test { kotlin.srcDirs("test/") }
 
 /* Resources */
 sourceSets["main"].resources.srcDirs("resources")
@@ -33,7 +29,7 @@ sourceSets["test"].resources.srcDirs("test-resources")
 
 /* Detekt */
 detekt {
-    source = files(sources.map { it.second })
+    source = files("src/", "test/")
     config = files("detekt.yml")
 }
 
