@@ -29,8 +29,8 @@ sourceSets["test"].resources.srcDirs("test-resources")
 
 /* Detekt */
 detekt {
-    source = files("src/", "test/")
-    config = files("detekt.yml")
+    source.setFrom("src/", "test/")
+    config.setFrom("detekt.yml")
 }
 
 /* Check with JUnit 5 */
@@ -43,6 +43,6 @@ tasks.test {
 
 /* Gradle wrapper */
 tasks.withType<Wrapper> {
-    gradleVersion = "7.6"
+    gradleVersion = "8.3"
     distributionType = Wrapper.DistributionType.BIN
 }
