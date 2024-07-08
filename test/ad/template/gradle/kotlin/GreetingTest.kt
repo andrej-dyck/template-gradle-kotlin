@@ -1,29 +1,23 @@
 package ad.template.gradle.kotlin
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
+import kotlin.test.assertEquals
 
 class GreetingTest {
 
     @Test
-    fun `casual greeting starts with hello`() {
-        assertThat(
-            CasualGreeting().asString()
-        ).startsWith(
-            "Hello"
+    fun `casual greeting starts with hello`() =
+        assert(
+            CasualGreeting().asString().startsWith("Hello")
         )
-    }
 
     @Test
-    fun `casual greeting ends with a bang!`() {
-        assertThat(
-            CasualGreeting().asString()
-        ).endsWith(
-            "!"
+    fun `casual greeting ends with a bang!`() =
+        assert(
+            CasualGreeting().asString().endsWith("!")
         )
-    }
 
     @ParameterizedTest
     @ValueSource(
@@ -33,29 +27,23 @@ class GreetingTest {
             "Eve"
         ]
     )
-    fun `casual greeting greets person by name`(name: String) {
-        assertThat(
+    fun `casual greeting greets person by name`(name: String) =
+        assertEquals(
+            expected = "Hello, $name!",
             CasualGreeting(name).asString()
-        ).isEqualTo(
-            "Hello, $name!"
         )
-    }
 
     @Test
-    fun `casual greeting is Hello! when no name is given`() {
-        assertThat(
+    fun `casual greeting is Hello! when no name is given`() =
+        assertEquals(
+            expected = "Hello!",
             CasualGreeting().asString()
-        ).isEqualTo(
-            "Hello!"
         )
-    }
 
     @Test
-    fun `hello world greets the world casually`() {
-        assertThat(
+    fun `hello world greets the world casually`() =
+        assertEquals(
+            expected = "Hello, world!",
             HelloWorld.asString()
-        ).isEqualTo(
-            "Hello, world!"
         )
-    }
 }
